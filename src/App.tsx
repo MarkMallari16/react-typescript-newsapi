@@ -19,7 +19,10 @@ interface Articles {
   url: string;
   urlToImage: string
 }
+
+
 function App() {
+  //storing news lists
   const [newsLists, setNewsLists] = useState<Articles[]>([]);
 
   const fetchNewsAPI = async () => {
@@ -39,7 +42,6 @@ function App() {
   useEffect(() => {
     fetchNewsAPI();
   }, [])
-
 
   return (
     <>
