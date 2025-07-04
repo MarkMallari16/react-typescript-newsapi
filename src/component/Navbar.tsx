@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar: React.FC = () => {
     return (
-        <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3">
+        <header className="mt-6 relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3">
             <nav className="max-w-[98rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
                 <div className="flex items-center justify-between">
                     <a className="flex-none text-xl font-semibold focus:outline-hidden focus:opacity-80" href="#" aria-label="Brand">

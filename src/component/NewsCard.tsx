@@ -20,7 +20,7 @@ interface NewsCardProps {
     article: Article;
 }
 
-const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
+const NewsCard = ({ article }: NewsCardProps) => {
     const [isViewDescription, setIsViewDescription] = useState<boolean>(false);
 
     const viewDesciption = () => {
@@ -50,8 +50,8 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                     <span className="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium border border-gray-800 text-gray-800">{article.source.name}</span>
                     <div >
                         <h1 className='pt-3 text-2xl font-bold'>{article.title}</h1>
-                        <p className='pt-4 text-gray-600 inline-flex'>{!isViewDescription ? `${article.description.slice(0, 40)}...` : article.description}</p>
-                        <button className="cursor-pointer text-gray-600" onClick={viewDesciption}>{isViewDescription ? 'see less' : 'see more'}</button>
+                        <p className='pt-4 text-gray-600 inline-flex'>{!isViewDescription ? `${article?.description ? article.description.slice(0, 40) : ""}...` : article.description}</p>
+                        {article?.description && <button className="cursor-pointer text-gray-600" onClick={viewDesciption}>{isViewDescription ? 'see less' : 'see more'}</button>}
                     </div>
                     <div className='flex items-center gap-6 pt-4'>
                         {article.author && (

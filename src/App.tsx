@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import NewsCard from './component/NewsCard';
 import Navbar from './component/Navbar';
+import Footer from './component/Footer';
 interface Source {
   id: string;
   name: string;
@@ -39,24 +40,23 @@ function App() {
     fetchNewsAPI();
   }, [])
 
+
   return (
     <>
       <Navbar />
-      <div className='lg:container lg:mx-auto mx-4 '>
+      <main className='lg:container lg:mx-auto mx-4 '>
         <header>
           <h1 className='font-bold text-3xl mt-10 mb-6'>Latest News</h1>
         </header>
         <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
           {
-            newsLists.slice(0, 12).map((news) => (
+            newsLists.map((news) => (
               <NewsCard key={news.title} article={news} />
             ))
           }
         </section>
-      </div>
-      <footer className='py-20'>
-          <hr className='border-1 border-gray-300'/>
-      </footer>
+      </main>
+      <Footer />
     </>
 
   )
