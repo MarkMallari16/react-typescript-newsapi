@@ -9,23 +9,22 @@ import Footer from './component/Footer.tsx'
 import Technology from './pages/Technology.tsx'
 import Sports from './pages/Sports.tsx'
 import Business from './pages/Business.tsx'
+import NotFound from './pages/NotFound.tsx'
+import Home from './pages/Home.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    
     <BrowserRouter>
-      <Navbar />
-      <main className='lg:container lg:mx-auto mx-4 '>
-        <Routes>
-          <Route index element={<App />} />
+      <Routes>
+        <Route path='/' element={<App />}>
+          <Route index element={<Home />} />
           <Route path='politics' element={<Politics />} />
           <Route path='technology' element={<Technology />} />
           <Route path='sports' element={<Sports />} />
           <Route path='business' element={<Business />} />
-        </Routes>
-       
-      </main>
-      <Footer />
+          <Route path='*' element={<NotFound />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   </StrictMode>
 )

@@ -25,7 +25,7 @@ const Navbar = () => {
                         <NavLink to="politics" className={({ isActive }) => `font-medium focus:outline-none ${isActive ? 'text-blue-500' : 'text-black'}`} >Politics</NavLink>
                         <NavLink to="technology" className={({ isActive }) => `font-medium focus:outline-none ${isActive ? 'text-blue-500' : 'text-black'}`} >Technology</NavLink>
                         <NavLink to="sports" className={({ isActive }) => `font-medium focus:outline-none ${isActive ? 'text-blue-500' : 'text-black'}`} >Sports</NavLink>
-                        <NavLink to="b" className={({ isActive }) => `font-medium focus:outline-none ${isActive ? 'text-blue-500' : 'text-black'}`} >Business</NavLink>
+                        <NavLink to="business" className={({ isActive }) => `font-medium focus:outline-none ${isActive ? 'text-blue-500' : 'text-black'}`} >Business</NavLink>
                     </div>
                 </div>
             </nav>
