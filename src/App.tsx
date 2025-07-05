@@ -19,6 +19,20 @@ interface Articles {
   url: string;
   urlToImage: string
 }
+interface User {
+  type: 'user';
+  id: number;
+  username: string;
+  password: string;
+  email: string;
+}
+interface Person {
+  type: 'person';
+  id: number;
+  name: string;
+  age: number;
+}
+
 
 
 function App() {
@@ -38,10 +52,20 @@ function App() {
       console.error(error)
     }
   }
+
   //creating side effects
   useEffect(() => {
     fetchNewsAPI();
   }, [])
+
+  function logDetails(value: Person | User): void {
+    if (value.type === 'person') {
+      console.log(value.age);
+    }
+    if (value.type === 'user') {
+      console.log(value.email);
+    }
+  }
 
   return (
     <>
@@ -60,7 +84,6 @@ function App() {
       </main>
       <Footer />
     </>
-
   )
 }
 
