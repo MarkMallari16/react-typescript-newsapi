@@ -33,8 +33,14 @@ interface Person {
   age: number;
 }
 
+function addNumber(num1: string, num2: string): number {
+  let intNum1 = parseInt(num1);
+  let intNum2 = parseInt(num2);
 
+  return intNum1 + intNum2;
+}
 
+console.log(addNumber("1", "1"));
 function App() {
   //storing news lists
   const [newsLists, setNewsLists] = useState<Articles[]>([]);

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const Navbar: React.FC = () => {
     return (
@@ -20,7 +21,7 @@ const Navbar: React.FC = () => {
                 </div>
                 <div id="hs-navbar-example" className="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block" aria-labelledby="hs-navbar-example-collapse">
                     <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-                        <a className="font-medium text-blue-500 focus:outline-hidden" href="#" aria-current="page">Politics</a>
+                        <Link to="politics" className="font-medium text-blue-500 focus:outline-hidden" aria-current="page">Politics</Link>
                         <a className="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400" href="#">Technology</a>
                         <a className="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400" href="#">Sports</a>
                         <a className="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400" href="#">Business</a>

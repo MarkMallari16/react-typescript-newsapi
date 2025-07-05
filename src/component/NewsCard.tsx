@@ -19,7 +19,6 @@ interface Article {
 interface NewsCardProps {
     article: Article;
 }
-
 const NewsCard = ({ article }: NewsCardProps) => {
     const [isViewDescription, setIsViewDescription] = useState<boolean>(false);
 
