@@ -4,6 +4,7 @@ import './App.css'
 import NewsCard from './component/NewsCard';
 import Navbar from './component/Navbar';
 import Footer from './component/Footer';
+import { Meta } from 'react-router';
 interface Source {
   id: string;
   name: string;
@@ -18,19 +19,6 @@ interface Articles {
   description: string;
   url: string;
   urlToImage: string
-}
-interface User {
-  type: 'user';
-  id: number;
-  username: string;
-  password: string;
-  email: string;
-}
-interface Person {
-  type: 'person';
-  id: number;
-  name: string;
-  age: number;
 }
 
 function addNumber(num1: string, num2: string): number {
@@ -64,31 +52,19 @@ function App() {
     fetchNewsAPI();
   }, [])
 
-  function logDetails(value: Person | User): void {
-    if (value.type === 'person') {
-      console.log(value.age);
-    }
-    if (value.type === 'user') {
-      console.log(value.email);
-    }
-  }
-
   return (
     <>
-      <Navbar />
-      <main className='lg:container lg:mx-auto mx-4 '>
-        <header>
-          <h1 className='font-bold text-3xl mt-10 mb-6'>Latest News</h1>
-        </header>
-        <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-          {
-            newsLists.map((news) => (
-              <NewsCard key={news.title} article={news} />
-            ))
-          }
-        </section>
-      </main>
-      <Footer />
+     
+      <header>
+        <h1 className='font-bold text-3xl mt-10 mb-6'>Latest News</h1>
+      </header>
+      <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+        {
+          newsLists.map((news) => (
+            <NewsCard key={news.title} article={news} />
+          ))
+        }
+      </section>
     </>
   )
 }
