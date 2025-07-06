@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Technology = () => {
   return (
     <div className="flex justify-center items-center min-h-screen">

@@ -6,9 +6,6 @@ import Footer from './component/Footer'
 
 
 function App() {
-  let ids: number[] = [];
-  ids.push(1);
-  ids.push(2);
 
   return (
     <>

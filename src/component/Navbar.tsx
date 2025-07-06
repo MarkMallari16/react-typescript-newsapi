@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router'
+import { NavLink } from 'react-router'
 
 const Navbar = () => {
-
     return (
         <header className="mt-6 relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3">
             <nav className="max-w-[98rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
